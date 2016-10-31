@@ -2,7 +2,7 @@
 # encoding: utf-8
 
 module XCPretty
-  class Clean < Formatter
+  class CleanFormatter < Formatter
 
     def pretty_format(text)
       if text.include? "Can't find keyplane that supports type 4 for keyboard"
@@ -13,3 +13,5 @@ module XCPretty
     
   end
 end
+
+CleanFormatter
