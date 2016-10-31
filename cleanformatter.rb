@@ -4,9 +4,10 @@
 class CleanFormatter < XCPretty::Simple
 	def pretty_format(text)
       if text.include? "Can't find keyplane that supports type 4 for keyboard"
-        return
+        parser.parse("")
+      else
+      	parser.parse(text)
       end
-      parser.parse(text)
     end
 end
 
